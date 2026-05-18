@@ -1,4 +1,4 @@
-name: 05-contexts
+name: 05 - contexts
 run-name: 05-contexts | DEBUG - ${{ inputs.debug }}
 on: 
     push:
