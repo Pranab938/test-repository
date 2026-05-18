@@ -8,7 +8,7 @@ on:
                 type: boolean
                 default: false
 env:
-    JOB_VAR: "I am a job var"
+    WORKFLOW_VAR: "I am a job var"
 jobs:
     echo:
         runs-on: ubuntu-latest
