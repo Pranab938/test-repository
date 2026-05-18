@@ -1,0 +1,26 @@
+name: 07 - Using Variables
+run-name: 07-Using Variables | DEBUG - ${{ inputs.debug && 'ON' || 'OFF'}}
+on: 
+    push:
+    workflow_dispatch:
+        inputs: 
+            debug:
+                type: boolean
+                default: false
+env:
+    JOB_VAR: "I am a job var"
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        env:
+            JOB_VAR: "I am a job var"
+        steps:
+            - name: 'Print Env Variables'
+              env:
+                STEP_VAR: "I am a step env var"
+                step_var2: "I am another step env var" 
+              run: | 
+                echo "Env var: ${{ env.STEP_VAR }}"
+                echo "Env var 2: $step_var2"
+                echo "Job env var: ${{ env.JOB_VAR }}"
+                echo "Workflow env var: ${{ env.WORKFLOW_VAR }}"
