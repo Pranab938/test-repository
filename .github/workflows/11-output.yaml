@@ -1,4 +1,4 @@
-name: 10 - Working with output
+name: 11 - Working with output
 
 on: 
     workflow_dispatch:
@@ -10,7 +10,6 @@ on:
                     - failure
                 default: success
                 
-    pull_request:
 jobs:
     Build:
         runs-on: ubuntu-latest
